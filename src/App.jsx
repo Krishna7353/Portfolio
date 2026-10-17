@@ -105,7 +105,10 @@ export default function App() {
       </main>
       <footer className="footer">
         <div className="wrap">
-          <p>Built with React, Three.js and a lot of chai by {profile.name}. Press Ctrl K to jump anywhere.</p>
+          <p>
+  Crafted with code, caffeine, and curiosity by {profile.name}.
+  <span> Press Ctrl K to jump anywhere.</span>
+</p>
         </div>
       </footer>
       <CommandPalette open={palette} onClose={() => setPalette(false)} items={items} />

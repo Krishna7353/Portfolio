@@ -9,7 +9,8 @@ function leatherTexture() {
   const c = document.createElement("canvas");
   c.width = c.height = 512;
   const g = c.getContext("2d");
-  g.fillStyle = "#c0132a";
+   g.fillStyle = "#c0132a";
+  // g.fillStyle = "#000000ff";
   g.fillRect(0, 0, 512, 512);
   const img = g.getImageData(0, 0, 512, 512);
   for (let i = 0; i < img.data.length; i += 4) {
@@ -149,15 +150,17 @@ export default function BallScene({ onHit, onFail }) {
       camera.updateProjectionMatrix();
       const vh = 2 * Math.tan((camera.fov * Math.PI) / 360) * camera.position.z;
       const vw = vh * camera.aspect;
-      let target;
+           let target;
       if (camera.aspect < 0.9) {
-        target = Math.min(vw * 0.72, vh * 0.42);
+        // phones: smaller ball above the text
+        target = Math.min(vw * 0.5, vh * 0.3);
         base.x = 0;
-        base.y = vh * 0.2;
+        base.y = vh * 0.22;
       } else {
-        target = vh * 0.74;
-        base.x = vw * 0.2;
-        base.y = vh * 0.02;
+        // desktop: ball takes about half the hero height
+        target = vh * 0.5;
+        base.x = vw * 0.22;
+        base.y = vh * 0.04;
       }
       pivot.scale.setScalar(target / (R * 2));
     };

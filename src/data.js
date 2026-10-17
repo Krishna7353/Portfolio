@@ -28,9 +28,11 @@ export const profile = {
 // Shown on the collectible "player card" in the About section.
 export const playerCard = {
   position: "All-rounder",
-  batting: "Frontend: React, JavaScript(ES6), CSS",
-  bowling: "Backend: Java, SpringBoot, JSP",
-  fielding: "Tooling: Git, Postman, Vercel",
+
+batting: "Frontend: React.js, JavaScript (ES6+), HTML5, CSS3",
+bowling: "Backend: Java, Spring Boot, REST APIs, Hibernate, JSP",
+fielding: "Tools & Database: MySQL, PostgreSQL, Git, GitHub, Postman, Docker",
+
   stats: [
     { label: "Projects shipped", value: 6, suffix: "" },
     { label: "Commits", value: 1200, suffix: "+" },
@@ -40,10 +42,26 @@ export const playerCard = {
 };
 
 export const skills = [
-  { group: "Frontend", items: ["React", "JavaScript (ES6+)", "HTML5 and CSS3", "Responsive design"] },
-  { group: "Backend", items: ["Java", "SpringBoot", "REST APIs", "Hibernate", "Spring Security"] },
-  { group: "Data", items: ["MongoDB", "PostgreSQL", "Redis", "Mongoose", "SQL"] },
-  { group: "Tooling", items: ["Git and GitHub", "Docker", "Postman", "Vercel", "Linux"] },
+{
+    group: "Frontend",
+    items: ["React.js", "JavaScript (ES6+)", "HTML5", "CSS3", "Responsive Design"]
+  },
+  {
+    group: "Backend",
+    items: ["Java", "Spring Boot", "REST APIs", "Hibernate", "JSP", "Maven"]
+  },
+  {
+    group: "Core Concepts",
+    items: ["OOP", "Collections Framework", "Exception Handling", "DSA"]
+  },
+  {
+    group: "Database",
+    items: ["MySQL", "PostgreSQL", "SQL", "JDBC"]
+  },
+  {
+    group: "Tools & Platforms",
+    items: ["Git", "GitHub", "Postman", "Docker"]
+  },
 ];
 
 // `featured: true` projects get a full case study with a live demo.
@@ -69,25 +87,26 @@ export const projects = [
     github: "https://github.com/your-username/event-booking-seat-locking",
     live: "https://example.com",
   },
-  {
-    id: "cricket-management",
-    featured: true,
-    demo: "cricket",
-    title: "Cricket Management System",
-    category: "Full-stack",
-    tagline: "One place to run a club season, from fixtures to the final scorecard.",
-    description:
-      "Club secretaries were juggling spreadsheets and group chats. This app manages teams, players, fixtures and live scoring, and works out the statistics for you.",
-    highlights: [
-      "Ball-by-ball scoring with extras, wickets and undo, pushed to every viewer with Socket.IO",
-      "Batting average, strike rate, economy and net run rate calculated from the ball log",
-      "Role-based access for admins, scorers and players using JWT",
-      "Round-robin fixture generator and an automatic points table",
-    ],
-    stack: ["React", "Node.js", "Express", "MongoDB", "Socket.IO", "JWT"],
-    github: "https://github.com/your-username/cricket-management-system",
-    live: "https://example.com",
-  },
+{
+  id: "cricket-management",
+  featured: true,
+  demo: "players",
+  title: "Cricket Management System",
+  category: "Full-stack",
+  tagline:
+    "A centralized platform to manage cricket players, teams, and player registrations.",
+  description:
+    "A web application that allows players to register, log in, and manage their profiles, while administrators can manage player records, update player details, and oversee registrations through a role-based dashboard.",
+  highlights: [
+    "Secure player registration and login with role-based access for users and admins",
+    "Admin dashboard to view, update, and delete player records",
+    "MySQL database to store player profiles, team details, and account information",
+    "Session-based authentication and role-based redirection to dedicated dashboards",
+  ],
+  stack: ["Java", "JSP", "Servlets", "JDBC", "MySQL", "HTML", "CSS", "JavaScript"],
+  github: "https://github.com/your-username/cricket-management-system",
+  live: "https://example.com",
+},
   {
     id: "realtime-chat",
     title: "Real-time Chat App",
@@ -136,10 +155,10 @@ export const projects = [
 
 export const experience = [
   {
-    when: "2025",
-    title: "Software Engineering Intern",
-    place: "Rest Coder Academy ",
-    text: "Built and shipped internal dashboard features in React, and wrote Node.js APIs with test coverage.",
+    when: "2026",
+    title: "Java Full Stack Developer Trainee",
+    place: "Rest Coder Academy",
+    text: "Developed a real-world Cricket Management System using Java, Spring Boot, REST APIs, Hibernate, MySQL, React.js, and JavaScript. Implemented user registration and login, tournament participation, available and upcoming match listings, and a separate admin portal with functionality to create, update, and delete tournaments. Gained hands-on experience in full-stack web development, database integration, and building RESTful applications."
   },
   {
     when: "2022 to 2026",
